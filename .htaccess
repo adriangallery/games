@@ -1,0 +1,9 @@
+# Configuración de directorio por defecto
+DirectoryIndex index.html
+
+# Redirección de mcorderv2 a mcorder (para mantener compatibilidad)
+RewriteEngine On
+RewriteBase /games/
+RewriteRule ^mcorderv2/?$ mcorder/ [R=301,L]
+RewriteRule ^mcorderv2/(.*)$ mcorder/$1 [R=301,L]
+
